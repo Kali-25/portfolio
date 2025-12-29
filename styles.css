@@ -1080,6 +1080,11 @@ section {
   color: #22c55e;
 }
 
+.certification-status.certified {
+  background: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+}
+
 /* =====================================================
    CONTACT SECTION
    ===================================================== */
