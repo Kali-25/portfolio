@@ -53,7 +53,7 @@ git push origin main
 
 ## 📝 License
 
-© 2024 Kali Saikiran. All rights reserved.
+© 2026 Kali Saikiran. All rights reserved.
 
 ---
 
