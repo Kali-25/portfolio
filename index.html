@@ -25,6 +25,31 @@
 </head>
 
 <body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot" style="background:#ef4444"></span>
+        <span class="terminal-dot" style="background:#f59e0b"></span>
+        <span class="terminal-dot" style="background:#22c55e"></span>
+        <span class="terminal-title">terminal</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line" id="loaderLine1"><span class="terminal-prompt">$</span> <span
+            class="terminal-cmd">./init-portfolio.sh</span></div>
+        <div class="terminal-line" id="loaderLine2" style="opacity:0"><span class="terminal-text-green">✓</span> Loading
+          assets...</div>
+        <div class="terminal-line" id="loaderLine3" style="opacity:0"><span class="terminal-text-green">✓</span>
+          Building components...</div>
+        <div class="terminal-line" id="loaderLine4" style="opacity:0"><span class="terminal-text-cyan">→</span>
+          Portfolio ready! 🚀</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+
+
   <!-- Canvas for Particle Effects -->
   <canvas id="particles"></canvas>
 
@@ -191,6 +216,13 @@
     </div>
   </section>
 
+  <!-- Section Divider -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <path d="M0,40 C300,80 900,0 1200,40 L1200,80 L0,80 Z"></path>
+    </svg>
+  </div>
+
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
@@ -288,6 +320,13 @@
     </div>
   </section>
 
+  <!-- Section Divider -->
+  <div class="section-divider to-dark">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+      <path d="M0,40 C300,80 900,0 1200,40 L1200,80 L0,80 Z"></path>
+    </svg>
+  </div>
+
   <!-- Skills Section -->
   <section id="skills" class="skills">
     <div class="container">
@@ -303,9 +342,10 @@
           </div>
           <h3>Cloud Platforms</h3>
           <div class="skill-tags">
-            <span class="tag">AWS</span>
-            <span class="tag">Azure</span>
-            <span class="tag">GCP</span>
+            <span class="tag"
+              data-desc="Primary cloud — hosting 7 EKS clusters, EC2, S3, Lambda, and multi-account architecture">AWS</span>
+            <span class="tag" data-desc="Managing Azure AD, App Services, and hybrid cloud integrations">Azure</span>
+            <span class="tag" data-desc="GCP experience with Compute Engine and GKE for cross-cloud setups">GCP</span>
           </div>
         </div>
 
@@ -319,10 +359,14 @@
           </div>
           <h3>Infrastructure as Code</h3>
           <div class="skill-tags">
-            <span class="tag">Terraform</span>
-            <span class="tag">Ansible</span>
-            <span class="tag">CloudFormation</span>
-            <span class="tag">Packer</span>
+            <span class="tag"
+              data-desc="Provisioning VPCs, EKS clusters, RDS, and IAM with reusable modules & remote state">Terraform</span>
+            <span class="tag"
+              data-desc="Configuration management for server provisioning and application deployments">Ansible</span>
+            <span class="tag"
+              data-desc="AWS-native IaC for stack-based infrastructure and nested templates">CloudFormation</span>
+            <span class="tag"
+              data-desc="Building golden AMIs for consistent, pre-configured EC2 instances">Packer</span>
           </div>
         </div>
 
@@ -339,11 +383,16 @@
           </div>
           <h3>Containerization</h3>
           <div class="skill-tags">
-            <span class="tag">Docker</span>
-            <span class="tag">Kubernetes (EKS)</span>
-            <span class="tag">Helm</span>
-            <span class="tag">ArgoCD</span>
-            <span class="tag">Karpenter</span>
+            <span class="tag"
+              data-desc="Containerizing 20+ microservices with multi-stage builds for production">Docker</span>
+            <span class="tag" data-desc="Managing 7 EKS clusters running 20+ microservices with auto-scaling">Kubernetes
+              (EKS)</span>
+            <span class="tag"
+              data-desc="Packaging and deploying apps with Helm charts across multiple environments">Helm</span>
+            <span class="tag"
+              data-desc="GitOps-based continuous delivery syncing Kubernetes state from Git repos">ArgoCD</span>
+            <span class="tag"
+              data-desc="Auto-scaling EKS nodes with right-sized instances for cost-efficient scheduling">Karpenter</span>
           </div>
         </div>
 
@@ -358,11 +407,17 @@
           </div>
           <h3>CI/CD & Automation</h3>
           <div class="skill-tags">
-            <span class="tag">Jenkins</span>
-            <span class="tag">GitHub Actions</span>
-            <span class="tag">Bitbucket Pipelines</span>
-            <span class="tag">Bitrise</span>
-            <span class="tag">AWS CodePipeline</span>
+            <span class="tag"
+              data-desc="Building 20+ pipelines for microservices and frontend CI/CD with shared libraries">Jenkins</span>
+            <span class="tag"
+              data-desc="Automating CI/CD workflows with matrix builds, reusable workflows, and OIDC auth">GitHub
+              Actions</span>
+            <span class="tag" data-desc="Pipeline-as-code for microservices with Docker builds and ECR push">Bitbucket
+              Pipelines</span>
+            <span class="tag"
+              data-desc="Mobile app CI/CD for iOS and Android builds with automated signing">Bitrise</span>
+            <span class="tag" data-desc="AWS-native pipelines integrated with CodeBuild and CodeDeploy">AWS
+              CodePipeline</span>
           </div>
         </div>
 
@@ -375,12 +430,18 @@
           </div>
           <h3>Monitoring & Logging</h3>
           <div class="skill-tags">
-            <span class="tag">AWS CloudWatch</span>
-            <span class="tag">Prometheus</span>
-            <span class="tag">Grafana</span>
-            <span class="tag">ELK Stack</span>
-            <span class="tag">Graylog</span>
-            <span class="tag">Loki</span>
+            <span class="tag"
+              data-desc="Setting up alarms, dashboards, and log insights for AWS infrastructure monitoring">AWS
+              CloudWatch</span>
+            <span class="tag"
+              data-desc="Custom metrics collection with exporters and alerting rules for 7 clusters">Prometheus</span>
+            <span class="tag"
+              data-desc="Building real-time dashboards for service health, latency, and error tracking">Grafana</span>
+            <span class="tag" data-desc="Centralized logging with Elasticsearch, Logstash, and Kibana for debugging">ELK
+              Stack</span>
+            <span class="tag" data-desc="Log aggregation and search for large-scale distributed systems">Graylog</span>
+            <span class="tag"
+              data-desc="Lightweight log aggregation paired with Grafana for Kubernetes pod logs">Loki</span>
           </div>
         </div>
 
@@ -393,10 +454,12 @@
           </div>
           <h3>Programming & Scripting</h3>
           <div class="skill-tags">
-            <span class="tag">Bash</span>
-            <span class="tag">Python</span>
-            <span class="tag">Golang</span>
-            <span class="tag">Shell</span>
+            <span class="tag"
+              data-desc="Automating infrastructure tasks, deployments, and cron jobs with shell scripts">Bash</span>
+            <span class="tag" data-desc="Writing automation scripts, Lambda functions, and CLI tools">Python</span>
+            <span class="tag" data-desc="Building lightweight microservices and DevOps tooling">Golang</span>
+            <span class="tag"
+              data-desc="System administration scripts for server management and monitoring">Shell</span>
           </div>
         </div>
 
@@ -411,10 +474,12 @@
           </div>
           <h3>Databases & Caching</h3>
           <div class="skill-tags">
-            <span class="tag">MySQL</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">Redis</span>
-            <span class="tag">RDS (SQL Server)</span>
+            <span class="tag" data-desc="Managing relational databases for application backends">MySQL</span>
+            <span class="tag" data-desc="Document database administration for microservices data storage">MongoDB</span>
+            <span class="tag"
+              data-desc="In-memory caching and session management for high-performance apps">Redis</span>
+            <span class="tag" data-desc="AWS-managed SQL Server instances for enterprise applications">RDS (SQL
+              Server)</span>
           </div>
         </div>
 
@@ -427,15 +492,19 @@
           </div>
           <h3>Networking & Security</h3>
           <div class="skill-tags">
-            <span class="tag">VPC</span>
-            <span class="tag">ALB/NLB</span>
-            <span class="tag">DNS</span>
-            <span class="tag">SSL/TLS</span>
-            <span class="tag">IAM</span>
-            <span class="tag">KMS</span>
-            <span class="tag">Nginx</span>
-            <span class="tag">Traefik</span>
-            <span class="tag">Cert Manager</span>
+            <span class="tag" data-desc="Designing VPC architectures with subnets, NAT gateways, and peering">VPC</span>
+            <span class="tag"
+              data-desc="Configuring load balancers for traffic routing across microservices">ALB/NLB</span>
+            <span class="tag" data-desc="Managing Route53 hosted zones and domain routing">DNS</span>
+            <span class="tag"
+              data-desc="Certificate management and HTTPS enforcement across all services">SSL/TLS</span>
+            <span class="tag" data-desc="Designing least-privilege access policies and cross-account roles">IAM</span>
+            <span class="tag" data-desc="Encryption key management for secrets and data-at-rest security">KMS</span>
+            <span class="tag" data-desc="Reverse proxy and load balancing for web applications">Nginx</span>
+            <span class="tag"
+              data-desc="Kubernetes ingress controller with dynamic routing and middleware">Traefik</span>
+            <span class="tag" data-desc="Automated SSL certificate provisioning with Let's Encrypt in Kubernetes">Cert
+              Manager</span>
           </div>
         </div>
 
@@ -452,12 +521,15 @@
           </div>
           <h3>AI-Enhanced Workflow</h3>
           <div class="skill-tags">
-            <span class="tag">Factory.ai (Droid)</span>
-            <span class="tag">Augment</span>
-            <span class="tag">Codex</span>
-            <span class="tag">Claude</span>
-            <span class="tag">Gemini</span>
-            <span class="tag">Warp Terminal</span>
+            <span class="tag" data-desc="AI-powered code generation and pair programming assistant">Factory.ai
+              (Droid)</span>
+            <span class="tag" data-desc="AI coding assistant for code completion and refactoring">Augment</span>
+            <span class="tag" data-desc="OpenAI-powered code generation for automation scripts">Codex</span>
+            <span class="tag"
+              data-desc="AI assistant for documentation, debugging, and architecture reviews">Claude</span>
+            <span class="tag" data-desc="Google AI for code analysis, explanations, and optimization">Gemini</span>
+            <span class="tag" data-desc="AI-native terminal with command suggestions and inline docs">Warp
+              Terminal</span>
           </div>
         </div>
       </div>
@@ -897,9 +969,33 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">KS</a>
+          <p>DevOps Engineer passionate about automating infrastructure, building resilient systems, and delivering
+            cloud-native solutions at scale.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Highlights</h4>
+          <ul>
+
+            <li><a href="#certifications">Certifications</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <p>&copy; 2026 Kali Saikiran. All rights reserved.</p>
-        <p class="footer-tagline">Crafted with ☕ and Cloud ☁️</p>
+        <p class="footer-tagline">Built with ❤️ and Cloud ☁️</p>
       </div>
     </div>
   </footer>
