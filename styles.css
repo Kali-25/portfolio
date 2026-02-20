@@ -1873,3 +1873,13 @@ section {
 .certification-verify:hover {
   opacity: 1;
 }
+
+/* =====================================================
+   COMPANY FORMERLY SUBTITLE
+   ===================================================== */
+.company-formerly {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--text-muted);
+  font-style: italic;
+}
