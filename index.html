@@ -22,6 +22,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -151,65 +152,63 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-container">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-container">
       <div class="hero-content">
-        <div class="hero-badge">DevOps Engineer</div>
-        <h1 class="hero-title">KALI SAIKIRAN</h1>
-        <p class="hero-subtitle">
-          DevOps Engineer <span class="separator">|</span> Cloud & Platform
-          Engineer
+        <div class="hero-badge-wrapper">
+          <div class="hero-badge-pill">
+            <span class="badge-dot"></span>
+            DevOps & Cloud Engineer
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="text-gradient">KALI SAIKIRAN</span>
+        </h1>
+
+        <p class="hero-subtitle" style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem; font-weight: 500;">
+          DevOps Engineer <span style="color: var(--accent-primary)">|</span> Cloud & Platform Engineer
         </p>
+
         <p class="hero-description">
           Automating CI/CD pipelines, managing cloud infrastructure, and
           maintaining high-availability production systems on
           <span class="highlight">AWS</span> and
-          <span class="highlight">Azure</span>. Skilled in Infrastructure as
-          Code, Kubernetes, and delivering secure, scalable cloud solutions.
+          <span class="highlight">Azure</span>.
         </p>
+
         <div class="hero-cta">
-          <a href="KALI_SAIKIRAN.pdf" class="btn btn-primary" download>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14,2 14,8 20,8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10,9 9,9 8,9"></polyline>
-            </svg>
-            View Resume
+          <a href="KALI_SAIKIRAN.pdf" class="btn btn-primary btn-lg" download>
+            <i class="fas fa-file-alt"></i> View Resume
           </a>
-          <a href="#experience" class="btn btn-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-            </svg>
-            View Experience
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            Contact Me
+          <a href="#contact" class="btn btn-outline btn-lg">
+            <i class="fas fa-envelope"></i> Contact Me
           </a>
         </div>
-      </div>
-      <div class="hero-profile">
-        <div class="profile-card">
-          <div class="profile-glow"></div>
-          <div class="profile-image-wrapper">
-            <img src="profile.jpg" alt="Kali Saikiran" class="profile-image">
+
+        <div class="hero-tech-strip">
+          <div class="tech-strip-label">Powering Infrastructure With</div>
+          <div class="tech-logos">
+            <i class="fab fa-aws tech-logo" title="AWS"></i>
+            <i class="fab fa-docker tech-logo" title="Docker"></i>
+            <i class="fas fa-cubes tech-logo" title="Kubernetes"></i>
+            <i class="fab fa-linux tech-logo" title="Linux"></i>
+            <i class="fab fa-jenkins tech-logo" title="Jenkins"></i>
+            <i class="fas fa-code-branch tech-logo" title="Terraform"></i>
           </div>
-          <div class="profile-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            DevOps Engineer
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glass-profile-wrapper">
+          <div class="glass-profile-card">
+            <div class="profile-glow-effect"></div>
+            <div class="profile-image-container">
+              <div class="image-ring"></div>
+              <img src="profile.jpg" alt="Kali Saikiran" class="profile-image">
+            </div>
+
+            <!-- Badges Removed --> <!-- Floating Decoration Removed -->
           </div>
         </div>
       </div>
@@ -239,24 +238,23 @@
             <h3>My Journey</h3>
           </div>
           <p>
-            DevOps Engineer with hands-on experience in automating
-            <span class="highlight">CI/CD pipelines</span>, managing cloud
-            infrastructure, and maintaining
-            <span class="highlight">high-availability production systems</span>
-            on AWS and Azure.
+            DevOps Engineer with 2+ years of experience managing
+            <span class="highlight">multiple Kubernetes clusters</span> with
+            <span class="highlight">microservices</span> and CI/CD pipelines
+            for developers across two concurrent products in different domains.
           </p>
           <p>
-            Skilled in
+            Led on-prem to cloud migrations on AWS, modernized legacy application stacks
+            with <span class="highlight">Docker and Kubernetes</span>, and drove
+            SCM migration from Bitbucket to GitHub. Skilled in
             <span class="highlight">Infrastructure as Code</span> (Terraform,
-            Ansible, CloudFormation), infrastructure automation and
-            provisioning (Packer), and container orchestration using
-            <span class="highlight">Docker and Kubernetes</span>.
+            CloudFormation), container orchestration (EKS), and GitOps (ArgoCD, Helm).
           </p>
           <p>
-            Proficient in scripting (Bash, Python, Golang), monitoring and
-            alerting (CloudWatch, Prometheus, Grafana, ELK Stack), and
-            delivering secure, scalable, and cost-efficient cloud solutions
-            with a focus on reliability and operational excellence.
+            Track record of reducing deployment timesand optimizing cloud costs
+            through autoscaling, right-sizing, and governance policies. Currently
+            handling DevOps for an enterprise mobility platform and a fleet management
+            product simultaneously.
           </p>
         </div>
 
@@ -286,7 +284,7 @@
               </span>
               <span class="education-date">Aug 2019 – June 2023</span>
             </div>
-            <div class="education-gpa">GPA: 7.17</div>
+            <!-- GPA removed -->
           </div>
         </div>
       </div>
@@ -384,8 +382,8 @@
           <h3>Containerization</h3>
           <div class="skill-tags">
             <span class="tag"
-              data-desc="Containerizing 20+ microservices with multi-stage builds for production">Docker</span>
-            <span class="tag" data-desc="Managing 7 EKS clusters running 20+ microservices with auto-scaling">Kubernetes
+              data-desc="Containerizing microservices with multi-stage builds for production">Docker</span>
+            <span class="tag" data-desc="Managing multiple EKS clusters running microservices with auto-scaling">Kubernetes
               (EKS)</span>
             <span class="tag"
               data-desc="Packaging and deploying apps with Helm charts across multiple environments">Helm</span>
@@ -408,7 +406,7 @@
           <h3>CI/CD & Automation</h3>
           <div class="skill-tags">
             <span class="tag"
-              data-desc="Building 20+ pipelines for microservices and frontend CI/CD with shared libraries">Jenkins</span>
+              data-desc="Building pipelines for microservices and frontend CI/CD with shared libraries">Jenkins</span>
             <span class="tag"
               data-desc="Automating CI/CD workflows with matrix builds, reusable workflows, and OIDC auth">GitHub
               Actions</span>
@@ -521,10 +519,8 @@
           </div>
           <h3>AI-Enhanced Workflow</h3>
           <div class="skill-tags">
-            <span class="tag" data-desc="AI-powered code generation and pair programming assistant">Factory.ai
-              (Droid)</span>
+            <span class="tag" data-desc="AI-powered code generation and pair programming assistant">Factory.ai</span>
             <span class="tag" data-desc="AI coding assistant for code completion and refactoring">Augment</span>
-            <span class="tag" data-desc="OpenAI-powered code generation for automation scripts">Codex</span>
             <span class="tag"
               data-desc="AI assistant for documentation, debugging, and architecture reviews">Claude</span>
             <span class="tag" data-desc="Google AI for code analysis, explanations, and optimization">Gemini</span>
@@ -547,76 +543,9 @@
           <div class="glass-card experience-card">
             <div class="experience-header">
               <div class="experience-company">
-                <h3>Wenable Technologies Pvt. Ltd</h3>
+                <h3>AssuredTechmatics (formerly Assured Tracking Inc)</h3>
                 <p class="company-description">
-                  WeGuard - Android Enterprise Recommended EMM Platform
-                </p>
-              </div>
-              <div class="experience-meta">
-                <span class="experience-role">DevOps Engineer</span>
-                <span class="experience-location">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                  Hyderabad, India
-                </span>
-                <span class="experience-date">Nov 2023 – Present</span>
-              </div>
-            </div>
-            <ul class="experience-list">
-              <li>
-                <strong>Cloud Infrastructure & IaC:</strong> Engineered and
-                automated AWS infrastructure provisioning using Terraform and
-                CloudFormation, used Packer to standardize AMI builds
-              </li>
-              <li>
-                <strong>Kubernetes & Microservices:</strong> Architected and
-                operated EKS clusters for multi-language microservices (Java,
-                Golang, Python, .NET). Implemented Helm charts and ArgoCD for
-                GitOps-driven deployments
-              </li>
-              <li>
-                <strong>Autoscaling & Resilience:</strong> Configured
-                Karpenter-driven autoscaling and lifecycle policies with Nops
-                for resource efficiency
-              </li>
-              <li>
-                <strong>CI/CD & Build Automation:</strong> Designed pipelines
-                using Bitbucket Pipelines, Dockerfiles, and Bitrise for mobile
-                builds
-              </li>
-              <li>
-                <strong>Monitoring & Observability:</strong> Implemented
-                monitoring using AWS CloudWatch, Prometheus, and Grafana;
-                centralized logs with Graylog, Loki, and OpenSearch
-              </li>
-              <li>
-                <strong>Security & Certificates:</strong> Automated SSL/TLS
-                lifecycle management using cert-manager, managed DNS with
-                Route 53 and Cloudflare
-              </li>
-            </ul>
-            <div class="experience-tags">
-              <span class="tag">AWS</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">Terraform</span>
-              <span class="tag">ArgoCD</span>
-              <span class="tag">Prometheus</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="glass-card experience-card">
-            <div class="experience-header">
-              <div class="experience-company">
-                <h3>AssuredTechmatics</h3>
-                <p class="company-description">
-                  Apollo ELD - Electronic Logging Device solution for fleet
-                  safety
+                  Apollo ELD - Electronic Logging Device solution for fleet safety, regulatory compliance, and operational reliability for trucking businesses
                 </p>
               </div>
               <div class="experience-meta">
@@ -634,41 +563,97 @@
             </div>
             <ul class="experience-list">
               <li>
-                <strong>Cloud Infrastructure:</strong> Managed AWS
-                infrastructure across Linux and Windows servers using
-                Terraform and modular CloudFormation templates
+                <strong>Cloud Migration & Modernization:</strong> Migrated legacy on-prem workloads to AWS, containerized the application stack with Docker, and transitioned deployments to Amazon EKS with Helm-based releases and zero-downtime rollbacks - reducing deployment time.
               </li>
               <li>
-                <strong>CI/CD & Mobile Builds:</strong> Implemented pipelines
-                using GitHub Actions for backend services and Bitrise for
-                Android/iOS build automation
+                <strong>Cloud Infrastructure:</strong> Provisioned and operated AWS infrastructure across Linux and Windows servers using Terraform and modular CloudFormation templates, supporting 10+ services in production
               </li>
               <li>
-                <strong>Containerization:</strong> Deployed containerized
-                workloads with Docker and Kubernetes (EKS); used Helm for
-                templated releases
+                <strong>CI/CD & Mobile Builds:</strong> Built CI/CD pipelines using GitHub Actions for backend services and Bitrise for Android/iOS builds, enabling faster release cycles for a team of 8+ developers
               </li>
               <li>
-                <strong>Monitoring & Incident Response:</strong> Built
-                observability with Prometheus, Grafana, and integrated
-                alerting with Loki and Graylog
+                <strong>Monitoring & Incident Response:</strong> Established full observability stack with Prometheus, Grafana, and centralized logging (Loki, Graylog), reducing mean time to resolution for production incidents
               </li>
               <li>
-                <strong>Database & Backups:</strong> Administered Microsoft
-                SQL Server (SSMS) on AWS RDS, implemented automated backups
+                <strong>Security, Database & Compliance:</strong> Administered SQL Server on AWS RDS with scheduled backups. Oversaw SSL/TLS, DNS (Route 53), IAM least-privilege policies, and KMS encryption
               </li>
               <li>
-                <strong>Cost Optimization:</strong> Enforced autoscaling and
-                automated shutdown policies, applied tagging and rightsizing
-                to lower AWS spend
+                <strong>Serverless & Cost Optimization:</strong> Deployed hybrid architecture with AWS Lambda alongside EKS-hosted services. Reduced AWS spend through autoscaling, scheduled non-prod shutdowns, and instance right-sizing
+              </li>
+              <li>
+                <strong>GenAI Integration:</strong> Leveraged AI tools for pipeline generation, log debugging, documentation, and PR review automation — detecting bugs, security vulnerabilities, and suggesting refactors to reduce setup time and accelerate delivery cycles
               </li>
             </ul>
             <div class="experience-tags">
+              <span class="tag">AWS</span>
+              <span class="tag">EKS</span>
               <span class="tag">GitHub Actions</span>
               <span class="tag">Docker</span>
-              <span class="tag">EKS</span>
-              <span class="tag">SQL Server</span>
+              <span class="tag">Terraform</span>
               <span class="tag">Bitrise</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="glass-card experience-card">
+            <div class="experience-header">
+              <div class="experience-company">
+                <h3>Wenable Technologies Pvt. Ltd</h3>
+                <p class="company-description">
+                  WeGuard - Android Enterprise Recommended EMM platform (Google Gold Partner) for managing and securing large Android device fleets at enterprise scale
+                </p>
+              </div>
+              <div class="experience-meta">
+                <span class="experience-role">DevOps Engineer</span>
+                <span class="experience-location">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Hyderabad, India
+                </span>
+                <span class="experience-date">Nov 2023 – Present</span>
+              </div>
+            </div>
+            <ul class="experience-list">
+              <li>
+                <strong>Cloud Infrastructure & IaC:</strong> Engineered AWS infrastructure using Terraform and CloudFormation, standardized AMI builds with Packer across multiple Kubernetes (EKS) clusters hosting containerized microservices
+              </li>
+              <li>
+                <strong>Kubernetes & Platform Engineering:</strong> Architected and operated EKS clusters for multi-language services (Java, Golang, Python, .NET). Applied Helm charts and ArgoCD for GitOps-driven, zero-downtime deployments
+              </li>
+              <li>
+                <strong>SCM Migration:</strong> Led the complete migration from Bitbucket to GitHub - transitioning all repositories, branch policies, and CI/CD workflows from Bitbucket Pipelines to GitHub Actions with zero disruption to the development team
+              </li>
+              <li>
+                <strong>CI/CD & Build Automation:</strong> Designed pipelines using Bitbucket Pipelines, Dockerfiles, and Bitrise for mobile builds. Integrated with ArgoCD and Jenkins for continuous delivery
+              </li>
+              <li>
+                <strong>Autoscaling & Resilience:</strong> Configured Karpenter-driven autoscaling with Nops for resource efficiency. Supported disaster recovery planning and HA deployment patterns
+              </li>
+              <li>
+                <strong>Monitoring & Observability:</strong> Established monitoring using AWS CloudWatch, Prometheus, and Grafana; centralized logs with Graylog, Loki, and OpenSearch for faster incident triage
+              </li>
+              <li>
+                <strong>Microservices Segregation:</strong> Segregated API and consumer layers for microservices, separating endpoints from background workers. Coordinated backend and infrastructure changes with GenAI-assisted refactoring
+              </li>
+              <li>
+                <strong>Security, DNS & Networking:</strong> Systematized SSL/TLS lifecycle with cert-manager, directed DNS via Route 53 and Cloudflare, configured Nginx Ingress Controllers and AWS ALB/NLB for secure ingress
+              </li>
+              <li>
+                <strong>GenAI Integration:</strong> Leveraged AI tools for pipeline generation, log debugging, documentation, and AI-powered PR review to flag bugs, security leaks, and architectural issues — reducing setup time and accelerating delivery cycles
+              </li>
+            </ul>
+            <div class="experience-tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">ArgoCD</span>
+              <span class="tag">Prometheus</span>
+              <span class="tag">GitHub Actions</span>
             </div>
           </div>
         </div>
@@ -1007,6 +992,72 @@
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
+
+  <!-- AI Chatbot Widget -->
+  <div class="chatbot-widget" id="chatbotWidget">
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Toggle chatbot">
+      <div class="chatbot-toggle-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+      <span class="chatbot-badge">Ask me!</span>
+    </button>
+    
+    <div class="chatbot-container" id="chatbotContainer">
+      <div class="chatbot-header">
+        <div class="chatbot-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"></path>
+            <circle cx="7.5" cy="14.5" r="1.5"></circle>
+            <circle cx="16.5" cy="14.5" r="1.5"></circle>
+          </svg>
+        </div>
+        <div class="chatbot-title">
+          <span>Portfolio Assistant</span>
+          <span class="chatbot-status">AI-powered</span>
+        </div>
+        <button class="chatbot-close" id="chatbotClose" aria-label="Close chatbot">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="chatbot-message bot-message">
+          <div class="message-content">
+            <p>👋 Hi there! I'm Kali's portfolio assistant. I can help you learn more about him!</p>
+            <p>Try asking me about:</p>
+            <ul>
+              <li>His skills or expertise</li>
+              <li>His work experience</li>
+              <li>How to contact him</li>
+              <li>His projects or certifications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="suggestion-btn" data-question="What are his skills?">What are his skills?</button>
+        <button class="suggestion-btn" data-question="Tell me about his experience">Work experience</button>
+        <button class="suggestion-btn" data-question="How can I contact him?">Contact info</button>
+        <button class="suggestion-btn" data-question="What projects has he done?">Projects</button>
+      </div>
+      
+      <form class="chatbot-input" id="chatbotForm">
+        <input type="text" id="chatbotInput" placeholder="Ask me anything..." autocomplete="off">
+        <button type="submit" class="chatbot-send" aria-label="Send message">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

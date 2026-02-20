@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
     initTypingEffect();
     initParticles();
     initScrollToTop();
+    initChatbot();
 
     initMagneticButtons();
     initCardTilt();
     initNavbarScroll();
     initParallax();
     initTagHover();
+    initDashboardAnimations();
 
     console.log('Portfolio loaded successfully! 🚀');
 });
@@ -499,4 +501,199 @@ function initParticles() {
 
     init();
     animate();
+}
+
+/* =====================================================
+   DASHBOARD ANIMATIONS
+   ===================================================== */
+// Dashboard animations removed as component was replaced
+function initDashboardAnimations() {
+    // Placeholder for future profile stats
+}
+
+/* =====================================================
+   AI CHATBOT WIDGET
+   ===================================================== */
+function initChatbot() {
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotContainer = document.getElementById('chatbotContainer');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotForm = document.getElementById('chatbotForm');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotSuggestions = document.getElementById('chatbotSuggestions');
+    
+    if (!chatbotToggle || !chatbotContainer) return;
+    
+    // Knowledge base with portfolio data
+    const knowledgeBase = {
+        skills: {
+            keywords: ['skill', 'skills', 'expertise', 'tech', 'technologies', 'know', 'experience with'],
+            answer: `<p><strong>Cloud Platforms:</strong> AWS (primary), Azure, GCP</p>
+<p><strong>Infrastructure as Code:</strong> Terraform, Ansible, CloudFormation, Packer</p>
+<p><strong>Containerization:</strong> Docker, Kubernetes (EKS), Helm, ArgoCD, Karpenter</p>
+<p><strong>CI/CD:</strong> Jenkins, GitHub Actions, Bitbucket Pipelines, Bitrise</p>
+<p><strong>Monitoring:</strong> CloudWatch, Prometheus, Grafana, ELK Stack, Graylog, Loki</p>
+<p><strong>Programming:</strong> Bash, Python, Golang, Shell scripting</p>
+<p><strong>GenAI Tools:</strong> Factory.ai, Augment, Claude, Gemini, Warp Terminal</p>`
+        },
+        experience: {
+            keywords: ['experience', 'work', 'job', 'career', 'company', 'employment', 'role'],
+            answer: `<p><strong>AssuredTechmatics</strong> (Apr 2024 - Present)<br>
+DevOps Engineer for Apollo ELD fleet solution. Led on-prem to cloud migration on AWS, containerized workloads with Docker/EKS. Built CI/CD with GitHub Actions & Bitrise, established observability with Prometheus & Grafana. Leveraged GenAI for pipeline generation, log debugging, documentation, and AI-powered PR review automation.</p>
+<p><strong>Wenable Technologies</strong> (Nov 2023 - Present)<br>
+DevOps Engineer for WeGuard EMM Platform (Google Gold Partner). Managing multiple EKS clusters with microservices, led Bitbucket to GitHub migration. Segregated API and consumer layers for microservices with GenAI-assisted refactoring. Leveraged AI tools for pipeline generation, log debugging, and PR review. Focus on Terraform, ArgoCD, Karpenter autoscaling, and observability with Graylog, Loki, and OpenSearch.</p>
+<p>He concurrently manages DevOps for both products across different domains.</p>`
+        },
+        contact: {
+            keywords: ['contact', 'email', 'phone', 'reach', 'linkedin', 'github', 'connect'],
+            answer: `<p>📧 <strong>Email:</strong> saikiran2k25@gmail.com</p>
+<p>📱 <strong>Phone:</strong> +91-9160382920</p>
+<p>💼 <strong>LinkedIn:</strong> linkedin.com/in/saikirankali</p>
+<p>💻 <strong>GitHub:</strong> github.com/Kali-25</p>
+<p>🌐 <strong>Portfolio:</strong> saikiran.cloud</p>`
+        },
+        projects: {
+            keywords: ['project', 'projects', 'built', 'developed', 'created', 'worked on'],
+            answer: `<p><strong>E-KYC using Blockchain:</strong> Decentralized KYC system using Ethereum, Metamask, and Web3.js for immutable record keeping.</p>
+<p><strong>Rubik's Cube Solver:</strong> AI/ML-powered mobile app using Flask, Flutter, and Dart for real-time cube state recognition and solving.</p>`
+        },
+        certifications: {
+            keywords: ['certification', 'certified', 'certificate', 'license'],
+            answer: `<p>🏆 <strong>AWS Certified Cloud Practitioner</strong> - Foundational AWS cloud concepts</p>
+<p>🏆 <strong>AWS Cloud Architecture</strong> - Designing scalable infrastructure on AWS</p>
+<p>🏆 <strong>Cisco CCNA</strong> - Networking fundamentals and security essentials</p>`
+        },
+        about: {
+            keywords: ['about', 'who', 'background', 'summary', 'intro', 'bio'],
+            answer: `<p>Hi! I'm <strong>Kali Saikiran</strong>, a DevOps Engineer with 2+ years of experience managing multiple Kubernetes clusters with microservices and CI/CD pipelines across two concurrent products.</p>
+<p>I led on-prem to cloud migrations on AWS, modernized legacy stacks with Docker and Kubernetes, drove SCM migration from Bitbucket to GitHub, and integrate GenAI tools for pipeline generation, log debugging, documentation, and automated PR reviews. Currently handling DevOps for an enterprise mobility platform and a fleet management product simultaneously.</p>`
+        },
+        education: {
+            keywords: ['education', 'degree', 'college', 'university', 'b.tech', 'batch'],
+            answer: `<p>🎓 <strong>B.Tech in Information Technology</strong><br>
+Vignana Bharathi Institute of Technology, Hyderabad<br>
+Aug 2019 - June 2023</p>`
+        },
+        achievements: {
+            keywords: ['achievement', 'achievements', 'accomplish', 'impact', 'result', 'migration'],
+            answer: `<p>🚀 Migrated legacy on-prem workloads to AWS cloud, reducing deployment time</p>
+<p>🔄 Led SCM migration from Bitbucket to GitHub with zero disruption to the development team</p>
+<p>💰 Reduced AWS cloud costs through autoscaling and right-sizing</p>
+<p>☸️ Built and maintained multiple EKS clusters running containerized microservices</p>
+<p>🔀 Segregated API and consumer layers for microservices with GenAI-assisted refactoring</p>
+<p>🤖 Integrated GenAI tools for pipeline generation, log debugging, documentation, and AI-powered PR reviews</p>
+<p>📊 Established end-to-end observability stacks reducing incident resolution time</p>`
+        },
+        default: {
+            keywords: [],
+            answer: `<p>I'm Kali's portfolio assistant! I can help you learn about:</p>
+<ul>
+<li>His skills and expertise</li>
+<li>Work experience</li>
+<li>Key achievements</li>
+<li>Projects he's built</li>
+<li>Certifications</li>
+<li>How to contact him</li>
+</ul>
+<p>Just ask me a question! 😊</p>`
+        }
+    };
+    
+    // Toggle chatbot open/close
+    chatbotToggle.addEventListener('click', () => {
+        chatbotContainer.classList.toggle('active');
+        if (chatbotContainer.classList.contains('active')) {
+            setTimeout(() => chatbotInput.focus(), 300);
+        }
+    });
+    
+    chatbotClose.addEventListener('click', () => {
+        chatbotContainer.classList.remove('active');
+    });
+    
+    // Handle suggestion clicks
+    chatbotSuggestions.addEventListener('click', (e) => {
+        if (e.target.classList.contains('suggestion-btn')) {
+            const question = e.target.dataset.question;
+            handleMessage(question);
+        }
+    });
+    
+    // Handle form submission
+    chatbotForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const message = chatbotInput.value.trim();
+        if (message) {
+            handleMessage(message);
+            chatbotInput.value = '';
+        }
+    });
+    
+    // Process user message
+    function handleMessage(message) {
+        // Add user message
+        addMessage(message, 'user');
+        
+        // Show typing indicator
+        showTypingIndicator();
+        
+        // Get response after delay
+        setTimeout(() => {
+            removeTypingIndicator();
+            const response = getResponse(message);
+            addMessage(response, 'bot');
+        }, 800 + Math.random() * 400);
+    }
+    
+    // Get response based on keywords
+    function getResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        // Check each category
+        for (const [category, data] of Object.entries(knowledgeBase)) {
+            if (category === 'default') continue;
+            
+            for (const keyword of data.keywords) {
+                if (lowerMessage.includes(keyword)) {
+                    return data.answer;
+                }
+            }
+        }
+        
+        // Return default response
+        return knowledgeBase.default.answer;
+    }
+    
+    // Add message to chat
+    function addMessage(content, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chatbot-message ${type}-message`;
+        messageDiv.innerHTML = `<div class="message-content">${content}</div>`;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    
+    // Show typing indicator
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'chatbot-message bot-message';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = `
+            <div class="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        `;
+        chatbotMessages.appendChild(typingDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    
+    // Remove typing indicator
+    function removeTypingIndicator() {
+        const typing = document.getElementById('typingIndicator');
+        if (typing) typing.remove();
+    }
+    
 }
